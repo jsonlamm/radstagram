@@ -1,10 +1,22 @@
+'use strict';
+
 const express = require('express');
 const app = express();
 
-// const volleyball = require('volleyball');
-// app.use(volleyball);
+const volleyball = require('volleyball');
+app.use(volleyball);
 
 const path = require('path');
+
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('../webpack.config');
+
+
+const open = require('open');
+const port_number = 3000;
+
+let target_entry = 'http://localhost:' + port_number + '/';
 
 // app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/css')));
 
@@ -34,7 +46,7 @@ app.use((err, req, res, next) => {
 //   });
 // });
 
-app.listen(3000, () => {
-    console.log('server listening for requests on port 3000');
+app.listen(port_number, () => {
+  console.log(`server listening for requests on port ${port_number}`);
 });
-
+open(target_entry);
