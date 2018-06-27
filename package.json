@@ -17,13 +17,9 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.2.0",
-    "open": "0.0.5",
     "volleyball": "^1.5.1",
     "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-command": "^0.2.1",
-    "webpack-dev-server": "^3.1.4",
-    "webpack-livereload-plugin": "^2.1.1"
+    "webpack-command": "^0.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,12 +31,12 @@
     "open3000": "open http://localhost:3000",
     "start:dev": "webpack-dev-server --open",
     "start": "node server/index.js",
-    "start-dev2": "nodemon server/index.js",
+    "start-nodemon": "nodemon server/index.js",
     "start-watch": "nodemon  server/index $PORT --open",
     "start-dev": "cross-env NODE_ENV=development npm --silent run start-watch",
     "start-open": "nodemon  server/index & open http://localhost:3000",
     "dev": "cross-env NODE_ENV=development concurrently --kill-others \"npm --silent run start-dev\" \"npm --silent run build-js-dev\"",
-    "dev2": "cross-env NODE_ENV=development  concurrently --kill-others \"npm run build-js\" \"npm run start-dev2\" "
+    "dev2": "cross-env NODE_ENV=development  concurrently --kill-others \"npm run build\" \"npm run start-nodemon\" "
   },
   "repository": {
     "type": "git",
