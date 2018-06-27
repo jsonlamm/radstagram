@@ -38,7 +38,7 @@
     "start-dev": "cross-env NODE_ENV=development npm --silent run start-watch",
     "start-open": "nodemon  server/index & open http://localhost:3000",
     "dev": "cross-env NODE_ENV=development concurrently --kill-others \"npm --silent run start-dev\" \"npm --silent run build-js-dev\" ",
-    "dev2": "concurrently --kill-others \"npm run build-js\" \"npm run start-watch\" \"open http://localhost:3000\" "
+    "dev2": "concurrently --kill-others \"npm run build-js\" \"npm run start-watch\" \"npm open http://localhost:3000\" "
   },
   "repository": {
     "type": "git",
