@@ -33,19 +33,19 @@ module.exports = {
       }
     ]
   },
-  plugins: devMode ? [
-    new LiveReloadPlugin({
-      appendScriptTag: true,
-      // port: 3000
-    }),
-    {
-      apply: (compiler) => {
-        compiler.plugin('compilation', function () {
-          // This is just a utility, not part of the server
-          // eslint-disable-next-line no-console
-          console.log(new Date(), 'Build Started!');
-        });
-      }
-    }
-  ] : []
+  // plugins: devMode ? [
+  //   new LiveReloadPlugin({
+  //     appendScriptTag: true,
+  //     // port: 3000
+  //   }),
+  //   {
+  //     apply: (compiler) => {
+  //       compiler.plugin('compilation', function () {
+  //         // This is just a utility, not part of the server
+  //         // eslint-disable-next-line no-console
+  //         console.log(new Date(), 'Build Started!');
+  //       });
+  //     }
+  //   }
+  // ] : []
 }
