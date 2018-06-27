@@ -24,7 +24,7 @@ class Main extends Component {
 	render() {
 		return (
 			<div>
-				<p> Hey2 and {this.props.options[2]} </p>
+				<p> Hey234 and {this.props.options[2]} </p>
 			</div>
 		);
 	}
