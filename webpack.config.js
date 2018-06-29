@@ -7,8 +7,8 @@ const path = require('path');
 const USE_FAST_SOURCE_MAPS = false;
 
 module.exports = {
-  // mode: 'development',
-  entry: './src/app.js',
+  mode: 'development',
+  entry: './src/Radstagram.js',
   devtool:
     devMode && USE_FAST_SOURCE_MAPS ?
       'cheap-module-eval-source-map' :

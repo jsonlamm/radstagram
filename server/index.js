@@ -49,4 +49,4 @@ app.use((err, req, res, next) => {
 app.listen(port_number, () => {
   console.log(`server listening for requests on port ${port_number}`);
 });
-open(target_entry);
+// open(target_entry);
