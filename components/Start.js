@@ -1,6 +1,6 @@
 // dependencies
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import createReactClass from 'create-react-class';
 // styles
 
@@ -14,9 +14,9 @@ const Main = createReactClass({
 		return (
 			<div>
 				<h1>
-					<BrowserRouter>
+					<Router>
 						<Link to="/">Radstagram!</Link>
-					</BrowserRouter>
+					</Router>
 				</h1>
 				{React.cloneElement(this.props.children, this.props)}
 			</div>
