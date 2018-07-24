@@ -1,21 +1,32 @@
 // dependencies
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, BrowserHistory, IndexRoute } from 'react-router';
+import { Route, BrowserHistory, IndexRoute } from 'react-router';
+import { BrowserRouter} from 'react-router-dom';
 // styles
 
 // components
 import Main from '../components/Start'
+import SinglePost from '../components/SinglePost';
+import Grid from '../components/Grid';
 
-const router = (
-  <Router history={BrowserHistory}>
-    <Route path="/" component={Main}>
-    </Route>
-  </Router>
-)
+// const Router = (
+//   <BrowserRouter history={BrowserHistory}>
+//     <Route path="/" component={Main}>
+
+
+//     </Route>
+//   </BrowserRouter>
+// )
 
 ReactDOM.render(
   <Main>
-    <p>A child</p>
-  </Main>, document.getElementById('app'));
+    <p>
+      ahoy... reverted back to props.children!
+    </p>
+  </Main>
+  , document.getElementById('app'));
 
+// <IndexRoute component={Grid}></IndexRoute>
+  // <Route path="/view/" component={SinglePost}></Route>
+  
